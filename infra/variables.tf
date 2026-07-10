@@ -20,7 +20,12 @@ variable "image_versions_file" {
 variable "public_hosts" {
   description = "Public hostnames Traefik should route to this app (TLS via Let's Encrypt)."
   type        = list(string)
-  default     = ["www.parcerisa.xyz"]
+  default = [
+    "www.parcerisa.xyz",
+    "parcerisa.xyz",
+    "www.parcerisa.dev",
+    "parcerisa.dev",
+  ]
 }
 
 variable "replicas" {
