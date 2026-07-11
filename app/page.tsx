@@ -102,7 +102,7 @@ export default function Home() {
                             The guiding principle is correctness over fluency: the ontology has to be logically
                             verifiable, so the original regulation can be reconstructed from it.
                         </Project>
-                        <Project href="https://github.com/AimbotParce/HomeInfra" title="HomeInfra">
+                        <Project title="HomeInfra" isPrivate>
                             The Terraform-managed home lab that runs this very website. It provisions a k3s Kubernetes
                             cluster on Proxmox VE — with Traefik ingress, Let&apos;s Encrypt TLS, Tailscale access and
                             TrueNAS-backed NFS storage — where every app deploys itself from its own repository through
