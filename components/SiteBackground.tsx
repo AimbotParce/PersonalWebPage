@@ -3,7 +3,7 @@ export default function SiteBackground() {
         <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
             <div className="grid-overlay absolute inset-0" />
             <div
-                className="aurora-blob animate-drift"
+                className="aurora-blob"
                 style={{
                     top: "-12%",
                     left: "-8%",
@@ -13,7 +13,7 @@ export default function SiteBackground() {
                 }}
             />
             <div
-                className="aurora-blob animate-drift-slow"
+                className="aurora-blob"
                 style={{
                     top: "6%",
                     right: "-12%",
@@ -23,7 +23,7 @@ export default function SiteBackground() {
                 }}
             />
             <div
-                className="aurora-blob animate-drift"
+                className="aurora-blob"
                 style={{
                     bottom: "-18%",
                     left: "18%",

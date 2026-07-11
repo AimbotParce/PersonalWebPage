@@ -76,12 +76,14 @@ body {
   }
 }
 
-/* Decorative background */
+/* Decorative background. Static on purpose: animating a large blurred layer
+   re-rasterizes the blur every frame and makes scrolling janky. Rasterized once
+   and cheaply composited. */
 .aurora-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(90px);
-  will-change: transform;
+  filter: blur(70px);
+  transform: translateZ(0);
 }
 
 .grid-overlay {
@@ -90,22 +92,6 @@ body {
   background-size: 64px 64px;
   -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, #000 35%, transparent 100%);
   mask-image: radial-gradient(ellipse 75% 55% at 50% 0%, #000 35%, transparent 100%);
-}
-
-@keyframes drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(0, -30px, 0) scale(1.08);
-  }
-}
-.animate-drift {
-  animation: drift 16s ease-in-out infinite;
-}
-.animate-drift-slow {
-  animation: drift 24s ease-in-out infinite;
 }
 
 @keyframes bob {
@@ -125,8 +111,6 @@ body {
   html {
     scroll-behavior: auto;
   }
-  .animate-drift,
-  .animate-drift-slow,
   .animate-bob {
     animation: none;
   }
