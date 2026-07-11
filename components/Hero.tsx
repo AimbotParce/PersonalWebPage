@@ -82,8 +82,8 @@ export default function Hero() {
                     >
                         A physicist turned AI engineer and software developer. I&apos;ve worked on everything from
                         quantum-mechanics simulations to computer vision and natural language processing. These days
-                        I&apos;m an AI engineer at Kabilio, building AI-powered accounting software, and studying Data
-                        Science — always chasing the next thing to learn.
+                        I&apos;m an AI engineer at Kabilio, building AI-powered accounting software, and finishing my
+                        studies in Data Science. Always chasing the next thing to learn.
                     </motion.p>
                     <motion.div
                         variants={item}

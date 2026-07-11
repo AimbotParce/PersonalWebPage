@@ -17,12 +17,12 @@ export default function Home() {
                     <ProjectSection id="experience" kicker="Career so far" title="Experience" cols={1}>
                         <ExperienceCard role="AI Engineer" company="Kabilio" href="https://www.kabilio.es/">
                             Kabilio is a two-year-old startup that has already grown to around 70 people, building the
-                            next generation of AI-powered Spanish accounting software — a platform designed from the
+                            next generation of AI-powered Spanish accounting software, a platform designed from the
                             ground up around AI decision-making, automation and agents. We run the full spectrum of AI:
-                            classical ML models, LLMs for classification and summarization, rule mining, recommendation
-                            systems, fully autonomous agents and chatbots. I joined as the company&apos;s second AI
-                            engineer and I&apos;m a key part of the AI team — now four AI engineers working alongside 20+
-                            full-stack, DevOps and data engineers.
+                            classical ML models, LLMs for classification and summarization, RAG, rule mining,
+                            recommendation systems, fully autonomous agents and chatbots. I joined as the company&apos;s
+                            second AI engineer and I&apos;m a key part of the AI team, now four AI engineers working
+                            alongside 20+ full-stack, DevOps and data engineers.
                         </ExperienceCard>
                         <ExperienceCard
                             role="Research Engineer"
@@ -56,10 +56,10 @@ export default function Home() {
                             href="https://github.com/AimbotParce/DnDWorldMapFrontend"
                             title="DnD Interactive World Map"
                         >
-                            I sometimes play DnD with friends, and wanted to create an interactive world map that I could
-                            project onto the table. To achieve this, I developed a web app that allows me to create and
-                            edit maps, add creatures, and control both their movements and the visibility of different
-                            map elements in real time. A{" "}
+                            I sometimes play DnD with friends, and wanted to create an interactive world map that I
+                            could project onto the table. To achieve this, I developed a web app that allows me to
+                            create and edit maps, add creatures, and control both their movements and the visibility of
+                            different map elements in real time. A{" "}
                             <a target="_blank" href="https://github.com/AimbotParce/DnDWorldMapBackend">
                                 backend
                             </a>{" "}
@@ -67,14 +67,16 @@ export default function Home() {
                             <a target="_blank" href="https://github.com/AimbotParce/DnDWorldMapFrontend">
                                 frontend
                             </a>
-                            , built with NextJS, enables seamless real-time updates for an immersive gameplay experience.
+                            , built with NextJS, enables seamless real-time updates for an immersive gameplay
+                            experience.
                         </Project>
                         <Project href="https://github.com/AimbotParce/RAG-Learning" title="RAG Learning">
                             I am currently learning about the RAG (Retrieval-Augmented Generation) model, a new
                             architecture that combines the best of both worlds in NLP: retrieval-based and
                             generation-based models. This model is able to generate text by retrieving relevant
                             information from a knowledge base, and then generating text conditioned on that information.
-                            I have been experimenting with building a simple book recommendation system using this model.
+                            I have been experimenting with building a simple book recommendation system using this
+                            model.
                         </Project>
                         <Project
                             href="https://github.com/stars/AimbotParce/lists/data-science-master-s"
@@ -98,11 +100,11 @@ export default function Home() {
                         description="As well as working on personal projects, I love to create small web pages that solve everyday problems, or that are just fun to use. Here are some of the web pages I've created:"
                     >
                         <WebProject title="Shared Flat Tracker" href="https://sft.parcerisa.xyz">
-                            I needed a way to collaboratively track all the flats that two colleagues and I found over the
-                            internet, to rent during the 2025-2026 academic year. So, I quickly spun up a web application
-                            using NextJS + Prisma to expose and interact with a PostgreSQL database, which I hosted on my
-                            Proxmox home lab. The page is still in a very early stage, so make sure to keep an eye on
-                            its{" "}
+                            I needed a way to collaboratively track all the flats that two colleagues and I found over
+                            the internet, to rent during the 2025-2026 academic year. So, I quickly spun up a web
+                            application using NextJS + Prisma to expose and interact with a PostgreSQL database, which I
+                            hosted on my Proxmox home lab. The page is still in a very early stage, so make sure to keep
+                            an eye on its{" "}
                             <a target="_blank" href="https://github.com/AimbotParce/SharedFlatTracker">
                                 GitHub repository
                             </a>{" "}
@@ -110,10 +112,10 @@ export default function Home() {
                         </WebProject>
                         <WebProject title="Teamificator" href="https://london.parcerisa.xyz">
                             Create teams of as many people as you want with as many constrains as you need. Maybe you
-                            want to distribute the seats in the work meeting, or maybe you want to create a balanced team
-                            for a sports game. Teamificator will allow you to ensure that you sit next to your crush and
-                            you don&apos;t have to talk to your boss. This web page is currently being developed. You can
-                            keep an eye on its{" "}
+                            want to distribute the seats in the work meeting, or maybe you want to create a balanced
+                            team for a sports game. Teamificator will allow you to ensure that you sit next to your
+                            crush and you don&apos;t have to talk to your boss. This web page is currently being
+                            developed. You can keep an eye on its{" "}
                             <a target="_blank" href="https://github.com/AimbotParce/teamificator.parcerisa.xyz">
                                 GitHub repository
                             </a>{" "}
@@ -125,9 +127,9 @@ export default function Home() {
                             that allows me to do just that using flask.
                         </WebProject>
                         <WebProject title="London Map" href="https://london.parcerisa.xyz">
-                            I visited London a few years ago, and loved it! The problem is that I have a terrible memory,
-                            and wanted to visit as many iconic places as possible. The solution: create a map with all
-                            the places I wanted to visit.
+                            I visited London a few years ago, and loved it! The problem is that I have a terrible
+                            memory, and wanted to visit as many iconic places as possible. The solution: create a map
+                            with all the places I wanted to visit.
                         </WebProject>
                     </ProjectSection>
 
