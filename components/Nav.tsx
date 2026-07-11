@@ -4,10 +4,10 @@ import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
 const links: [string, string][] = [
-    ["Experience", "#experience"],
     ["Projects", "#projects"],
     ["Web", "#web"],
     ["Studies", "#studies"],
+    ["Experience", "#experience"],
     ["Contact", "#contact"],
 ]
 
