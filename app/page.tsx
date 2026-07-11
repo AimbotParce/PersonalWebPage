@@ -91,6 +91,40 @@ export default function Home() {
                             </a>{" "}
                             on GitHub.
                         </Project>
+                        <Project
+                            href="https://github.com/AimbotParce/MDS-TFM-AccountingGraphAgent"
+                            title="Accounting Graph Agent"
+                        >
+                            My master&apos;s thesis: an intelligent agent for Spanish accounting regulation. Rather than
+                            relying on probabilistic LLM answers, I&apos;m turning the legislation from the BOE (Boletín
+                            Oficial del Estado) into a formal knowledge graph — an OWL/RDF ontology — then linking
+                            invoices to it and answering accounting questions through semantic inference over the graph.
+                            The guiding principle is correctness over fluency: the ontology has to be logically
+                            verifiable, so the original regulation can be reconstructed from it.
+                        </Project>
+                        <Project title="HomeInfra" isPrivate>
+                            The Terraform-managed home lab that runs this very website. It provisions a k3s Kubernetes
+                            cluster on Proxmox VE — with Traefik ingress, Let&apos;s Encrypt TLS, Tailscale access and
+                            TrueNAS-backed NFS storage — where every app deploys itself from its own repository through
+                            in-cluster CI runners. Everything you&apos;re looking at is served from it.
+                        </Project>
+                        <Project href="https://github.com/AimbotParce/TicketSplitter" title="TicketSplitter">
+                            A tool to split tickets and shared expenses across a group — think Tricount, but heading
+                            towards scanning a receipt and letting an LLM pull out the line items for you. It splits
+                            equally, by parts or by exact amounts (per ticket or line by line), tracks balances and
+                            suggests the minimal set of payments to settle up — with all the money math done in integer
+                            cents so splits always add back to the exact total. Built with Next.js and Prisma on
+                            PostgreSQL.
+                        </Project>
+                        <Project href="https://github.com/AimbotParce/StockControl" title="StockControl">
+                            A small app to keep track of the groceries I have at home, so I always know what&apos;s
+                            running low. Built with Next.js and Prisma on PostgreSQL and self-hosted on my home cluster.
+                        </Project>
+                        <Project href="https://github.com/AimbotParce/GradR" title="GradR">
+                            A fast, keyboard-driven terminal app for managing grading projects and tasks. I built it
+                            while teaching a few classes at the UPC to keep track of my students&apos; grades — a TUI
+                            written in Python with Textual, backed by SQLite.
+                        </Project>
                     </ProjectSection>
 
                     <ProjectSection
