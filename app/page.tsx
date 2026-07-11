@@ -15,7 +15,7 @@ export default function Home() {
 
                 <div className="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32">
                     <ProjectSection id="experience" kicker="Career so far" title="Experience" cols={1}>
-                        <ExperienceCard role="AI Engineer" company="Kabilio">
+                        <ExperienceCard role="AI Engineer" company="Kabilio" href="https://www.kabilio.es/">
                             Kabilio is a two-year-old startup that has already grown to around 70 people, building the
                             next generation of AI-powered Spanish accounting software — a platform designed from the
                             ground up around AI decision-making, automation and agents. We run the full spectrum of AI:
@@ -24,11 +24,24 @@ export default function Home() {
                             engineer and I&apos;m a key part of the AI team — now four AI engineers working alongside 20+
                             full-stack, DevOps and data engineers.
                         </ExperienceCard>
-                        <ExperienceCard role="Research Engineer" company="UPC">
+                        <ExperienceCard
+                            role="Research Engineer"
+                            company="UPC"
+                            href="https://cit.upc.edu/ca/upcxels-espai-de-dades/"
+                        >
                             For around six months I worked in a research group at the Universitat Politècnica de
                             Catalunya (UPC), building a Data Space for the Catalan agricultural sector. I designed and
                             developed a complex orchestrator that managed all the data connectors deployed across a
                             Kubernetes cluster.
+                        </ExperienceCard>
+                        <ExperienceCard role="AI Engineer" company="Awaait" href="https://www.awaait.com/">
+                            Awaait Artificial Intelligence builds fully-distributed, on-premise computer vision for
+                            smart, holistic fare-evasion detection. We ran dozens of servers inside stations of the
+                            Ferrocarrils de la Generalitat de Catalunya (FGC) and the New York City subway, detecting
+                            fare evasion in real time — people jumping over turnstiles or slipping in through emergency
+                            exits — and raising live alerts so station security agents could stop them in the act. We
+                            also provided the transport authorities with aggregated metrics to estimate the impact of
+                            fare evasion across their stations.
                         </ExperienceCard>
                     </ProjectSection>
 
