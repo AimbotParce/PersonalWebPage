@@ -28,6 +28,9 @@ export default function Hero() {
         return () => clearInterval(t)
     }, [])
 
+    // "a" vs "an" depending on the current role's first sound.
+    const article = /^[aeiou]/i.test(roles[roleIdx]) ? "an" : "a"
+
     return (
         <section
             ref={ref}
@@ -60,7 +63,7 @@ export default function Hero() {
                         variants={item}
                         className="mt-5 flex items-center justify-center gap-2 text-2xl font-medium sm:text-3xl lg:justify-start"
                     >
-                        <span className="text-muted">I&apos;m an</span>
+                        <span className="text-muted">I&apos;m</span>
                         <span className="relative inline-flex h-[1.4em] items-center overflow-hidden">
                             <AnimatePresence mode="popLayout" initial={false}>
                                 <motion.span
@@ -69,9 +72,10 @@ export default function Hero() {
                                     animate={{ y: 0, opacity: 1 }}
                                     exit={{ y: "-110%", opacity: 0 }}
                                     transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                                    className="text-gradient whitespace-nowrap font-semibold"
+                                    className="whitespace-nowrap"
                                 >
-                                    {roles[roleIdx]}
+                                    <span className="text-muted">{article}&nbsp;</span>
+                                    <span className="text-gradient font-semibold">{roles[roleIdx]}</span>
                                 </motion.span>
                             </AnimatePresence>
                         </span>
