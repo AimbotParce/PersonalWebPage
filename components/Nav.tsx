@@ -28,7 +28,7 @@ export default function Nav() {
             style={{ pointerEvents: show ? "auto" : "none" }}
             className="fixed inset-x-0 top-0 z-50"
         >
-            <nav className="mx-3 mt-3 flex items-center justify-between gap-4 rounded-full border border-white/10 bg-black/70 px-5 py-3 backdrop-blur-md sm:mx-auto sm:max-w-3xl">
+            <nav className="mx-3 mt-3 flex items-center justify-between gap-4 rounded-full border border-white/10 bg-black/40 px-5 py-3 backdrop-blur-xl sm:mx-auto sm:max-w-3xl">
                 <a href="#top" className="font-display text-lg font-bold tracking-tight">
                     MP
                 </a>
