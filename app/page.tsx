@@ -124,7 +124,7 @@ export default function Home() {
                             </a>{" "}
                             if you want to see the progress.
                         </WebProject>
-                        <WebProject href="https://mc.parcerisa.xyz" title="Minecraft Server Page">
+                        <WebProject href="https://mc.parcerisa.dev" title="Minecraft Server Page">
                             I have a Minecraft server with my friends, and I wanted to create a page where we could see
                             the server status, the players online, and manage the backups. I created a simple web page
                             that allows me to do just that using flask.
