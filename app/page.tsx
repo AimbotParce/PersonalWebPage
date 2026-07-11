@@ -1,3 +1,4 @@
+import ExperienceCard from "@/components/ExperienceCard"
 import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
 import Nav from "@/components/Nav"
@@ -13,6 +14,24 @@ export default function Home() {
                 <Hero />
 
                 <div className="mx-auto flex max-w-6xl flex-col gap-28 px-6 pb-32">
+                    <ProjectSection id="experience" kicker="Career so far" title="Experience" cols={1}>
+                        <ExperienceCard role="AI Engineer" company="Kabilio">
+                            Kabilio is a two-year-old startup that has already grown to around 70 people, building the
+                            next generation of AI-powered Spanish accounting software — a platform designed from the
+                            ground up around AI decision-making, automation and agents. We run the full spectrum of AI:
+                            classical ML models, LLMs for classification and summarization, rule mining, recommendation
+                            systems, fully autonomous agents and chatbots. I joined as the company&apos;s second AI
+                            engineer and I&apos;m a key part of the AI team — now four AI engineers working alongside 20+
+                            full-stack, DevOps and data engineers.
+                        </ExperienceCard>
+                        <ExperienceCard role="Research Engineer" company="UPC">
+                            For around six months I worked in a research group at the Universitat Politècnica de
+                            Catalunya (UPC), building a Data Space for the Catalan agricultural sector. I designed and
+                            developed a complex orchestrator that managed all the data connectors deployed across a
+                            Kubernetes cluster.
+                        </ExperienceCard>
+                    </ProjectSection>
+
                     <ProjectSection id="projects" kicker="Things I've built" title="Projects">
                         <Project href="https://github.com/AimbotParce/BEC-Simulations" title="BEC Simulations">
                             For my physics degree thesis, I developed an easy-to-use simulator for Bose-Einstein
