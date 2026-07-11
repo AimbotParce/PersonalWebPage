@@ -1,4 +1,4 @@
 # Container image to deploy. The build workflow (.github/workflows/deploy.yml)
 # pushes this on every merge to main. Pin a specific tag or @sha256 digest here
 # for reproducible, roll-forward-only deploys instead of the mutable :latest.
-image: ghcr.io/aimbotparce/www-parcerisa-xyz:sha-eec1ceb3fe9d
+image: ghcr.io/aimbotparce/www-parcerisa-xyz:sha-5974b50e251a
