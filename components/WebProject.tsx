@@ -1,6 +1,5 @@
-import Project from "./Project"
-
 import Image from "next/image"
+import Project from "./Project"
 
 export default function WebProject({
     title,
@@ -13,17 +12,18 @@ export default function WebProject({
 }) {
     return (
         <Project title={title} href={href}>
-            <a href={href}>
+            <a href={href} target="_blank" rel="noopener noreferrer" className="mb-3 block w-fit">
                 <Image
-                    className="my-2 w-auto"
+                    className="h-5 w-auto rounded"
                     src={`https://img.shields.io/website?label=${encodeURIComponent(
                         href.replace("https://", "")
                     )}&url=${encodeURIComponent(
                         href
-                    )}&up_message=up&up_color=brightgreen&down_message=down&down_color=red`}
+                    )}&up_message=up&up_color=brightgreen&down_message=down&down_color=red&style=flat-square`}
                     alt="Website status badge"
-                    height={10}
-                    width={0}
+                    height={20}
+                    width={140}
+                    unoptimized
                 />
             </a>
             {children}

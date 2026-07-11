@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 export default function Project({
     title,
     href,
@@ -10,20 +8,36 @@ export default function Project({
     children: React.ReactNode
 }) {
     return (
-        <div>
+        <article className="card group flex h-full flex-col p-6 sm:p-7">
             {href !== undefined ? (
                 <a
-                    className="flex items-center gap-2 hover:underline hover:underline-offset-4 text-3xl"
-                    target="_blank"
                     href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 font-display text-2xl font-semibold transition-colors group-hover:text-white"
                 >
                     {title}
-                    <Image aria-hidden src="/new-window.svg" alt="New Window icon" width={20} height={20} />
+                    <svg
+                        className="text-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden
+                    >
+                        <path d="M7 17 17 7M8 7h9v9" />
+                    </svg>
                 </a>
             ) : (
-                <h3 className="text-3xl">{title}</h3>
+                <h3 className="font-display text-2xl font-semibold">{title}</h3>
             )}
-            <p className="text-lg text-justify mt-1">{children}</p>
-        </div>
+            <div className="mt-3 text-[15px] leading-relaxed text-muted [&_a:hover]:underline [&_a]:text-accent [&_a]:underline-offset-4">
+                {children}
+            </div>
+        </article>
     )
 }
