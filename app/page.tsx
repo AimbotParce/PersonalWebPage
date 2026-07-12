@@ -123,7 +123,7 @@ export default function Home() {
                             team for a sports game. Teamificator will allow you to ensure that you sit next to your
                             crush and you don&apos;t have to talk to your boss. This web page is currently being
                             developed. You can keep an eye on its{" "}
-                            <a target="_blank" href="https://github.com/AimbotParce/teamificator.parcerisa.xyz">
+                            <a target="_blank" href="https://github.com/AimbotParce/TeamificatorWebPage">
                                 GitHub repository
                             </a>{" "}
                             if you want to see the progress.
