@@ -40,21 +40,20 @@ export default function Home() {
                             experience.
                         </Project>
                         <Project href="https://github.com/AimbotParce/RAG-Learning" title="RAG Learning">
-                            I am currently learning about the RAG (Retrieval-Augmented Generation) model, a new
-                            architecture that combines the best of both worlds in NLP: retrieval-based and
-                            generation-based models. This model is able to generate text by retrieving relevant
-                            information from a knowledge base, and then generating text conditioned on that information.
-                            I have been experimenting with building a simple book recommendation system using this
-                            model.
+                            A project I built to get hands-on with Retrieval-Augmented Generation (RAG) — the
+                            architecture that grounds a language model&apos;s output in relevant information pulled from
+                            a knowledge base, rather than relying on the model&apos;s parameters alone. I used it to put
+                            together a simple book recommendation system that retrieves candidate books and lets the
+                            model reason over them.
                         </Project>
                         <Project
                             href="https://github.com/stars/AimbotParce/lists/data-science-master-s"
                             title="MSc in Data Science"
                         >
-                            As part of my continuous learning journey, I am now studying for a MSc in Data Science. This
-                            master&apos;s degree covers a wide range of topics, from machine learning and deep learning
-                            to cloud computing and big data. It has a strong focus on practical applications and
-                            projects, so be sure to check out my{" "}
+                            I&apos;m now finishing a MSc in Data Science — currently working on my thesis. The degree
+                            covers a wide range of topics, from machine learning and deep learning to cloud computing
+                            and big data, with a strong focus on practical applications and projects, so be sure to
+                            check out my{" "}
                             <a target="_blank" href="https://github.com/stars/AimbotParce/lists/data-science-master-s">
                                 compiled list of MDS projects
                             </a>{" "}
@@ -93,6 +92,11 @@ export default function Home() {
                             A fast, keyboard-driven terminal app for managing grading projects and tasks. I built it
                             while teaching a few classes at the UPC to keep track of my students&apos; grades — a TUI
                             written in Python with Textual, backed by SQLite.
+                        </Project>
+                        <Project href="https://github.com/AimbotParce/PersonalWebPage" title="Personal Web Page">
+                            The very site you&apos;re looking at. A dark-themed Next.js portfolio with a full-screen
+                            landing and scroll-driven animations, built with Tailwind and framer-motion — and, like
+                            everything else here, self-hosted on my home cluster, deploying itself on every push.
                         </Project>
                     </ProjectSection>
 
@@ -133,6 +137,11 @@ export default function Home() {
                             I visited London a few years ago, and loved it! The problem is that I have a terrible
                             memory, and wanted to visit as many iconic places as possible. The solution: create a map
                             with all the places I wanted to visit.
+                        </WebProject>
+                        <WebProject title="Personal Web Page" href="https://www.parcerisa.dev">
+                            This website — the one you&apos;re on right now (or its .dev twin). I built it to showcase
+                            everything above: a dark, animated Next.js portfolio, served straight from my home
+                            Kubernetes cluster.
                         </WebProject>
                     </ProjectSection>
 
