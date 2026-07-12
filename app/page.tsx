@@ -106,7 +106,7 @@ export default function Home() {
                         title="Web pages"
                         description="As well as working on personal projects, I love to create small web pages that solve everyday problems, or that are just fun to use. Here are some of the web pages I've created:"
                     >
-                        <WebProject title="Shared Flat Tracker" href="https://sft.parcerisa.xyz">
+                        <WebProject title="Shared Flat Tracker" href="https://sft.parcerisa.dev">
                             I needed a way to collaboratively track all the flats that two colleagues and I found over
                             the internet, to rent during the 2025-2026 academic year. So, I quickly spun up a web
                             application using NextJS + Prisma to expose and interact with a PostgreSQL database, which I
@@ -117,7 +117,7 @@ export default function Home() {
                             </a>{" "}
                             if you want to see the progress.
                         </WebProject>
-                        <WebProject title="Teamificator" href="https://london.parcerisa.xyz">
+                        <WebProject title="Teamificator" href="https://teamificator.parcerisa.dev">
                             Create teams of as many people as you want with as many constrains as you need. Maybe you
                             want to distribute the seats in the work meeting, or maybe you want to create a balanced
                             team for a sports game. Teamificator will allow you to ensure that you sit next to your
@@ -133,7 +133,7 @@ export default function Home() {
                             the server status, the players online, and manage the backups. I created a simple web page
                             that allows me to do just that using flask.
                         </WebProject>
-                        <WebProject title="London Map" href="https://london.parcerisa.xyz">
+                        <WebProject title="London Map" href="https://london.parcerisa.dev">
                             I visited London a few years ago, and loved it! The problem is that I have a terrible
                             memory, and wanted to visit as many iconic places as possible. The solution: create a map
                             with all the places I wanted to visit.
