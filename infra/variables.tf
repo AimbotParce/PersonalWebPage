@@ -21,10 +21,17 @@ variable "public_hosts" {
   description = "Public hostnames Traefik should route to this app (TLS via Let's Encrypt)."
   type        = list(string)
   default = [
-    "www.parcerisa.xyz",
-    "parcerisa.xyz",
     "www.parcerisa.dev",
     "parcerisa.dev",
+  ]
+}
+
+variable "legacy_hosts" {
+  description = "Old hostnames still routed to the app only so it can permanently redirect them to https://www.parcerisa.dev (see next.config.ts)."
+  type        = list(string)
+  default = [
+    "www.parcerisa.xyz",
+    "parcerisa.xyz",
   ]
 }
 

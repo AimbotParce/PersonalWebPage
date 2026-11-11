@@ -1,5 +1,5 @@
 ###############################################################################
-# www.parcerisa.xyz -- personal website
+# www.parcerisa.dev -- personal website
 #
 # Stateless Next.js app (listens on :3000). No PVC: nothing to persist. Served
 # publicly through HomeInfra's Traefik "public" ingress, which terminates TLS
@@ -112,8 +112,10 @@ resource "kubernetes_ingress_v1" "web" {
   spec {
     ingress_class_name = "public"
 
+    # Legacy hosts reach the app too; next.config.ts redirects them to the
+    # canonical .dev URL (no Traefik CRDs needed by the ci-deploy account).
     dynamic "rule" {
-      for_each = toset(var.public_hosts)
+      for_each = toset(concat(var.public_hosts, var.legacy_hosts))
 
       content {
         host = rule.value
@@ -140,7 +142,8 @@ resource "kubernetes_ingress_v1" "web" {
     # resolver issues certificates. No secret_name: the certs are managed by
     # Traefik's ACME resolver.
     tls {
-      hosts = var.public_hosts
+      hosts = concat(var.public_hosts, var.legacy_hosts)
     }
   }
 }
+
