@@ -106,7 +106,11 @@ export default function Home() {
                         title="Web pages"
                         description="As well as working on personal projects, I love to create small web pages that solve everyday problems, or that are just fun to use. Here are some of the web pages I've created:"
                     >
-                        <WebProject title="Shared Flat Tracker" href="https://sft.parcerisa.dev">
+                        <WebProject
+                            title="Shared Flat Tracker"
+                            href="https://sft.parcerisa.dev"
+                            retiredNote="The flat hunt is over, so the app is no longer hosted. The code is still on GitHub."
+                        >
                             I needed a way to collaboratively track all the flats that two colleagues and I found over
                             the internet, to rent during the 2025-2026 academic year. So, I quickly spun up a web
                             application using NextJS + Prisma to expose and interact with a PostgreSQL database, which I
@@ -133,13 +137,17 @@ export default function Home() {
                             the server status, the players online, and manage the backups. I created a simple web page
                             that allows me to do just that using flask.
                         </WebProject>
-                        <WebProject title="London Map" href="https://london.parcerisa.dev">
+                        <WebProject
+                            title="London Map"
+                            href="https://london.parcerisa.dev"
+                            retiredNote="The trip is long done, so the map is no longer hosted."
+                        >
                             I visited London a few years ago, and loved it! The problem is that I have a terrible
                             memory, and wanted to visit as many iconic places as possible. The solution: create a map
                             with all the places I wanted to visit.
                         </WebProject>
                         <WebProject title="Personal Web Page" href="https://www.parcerisa.dev">
-                            This website — the one you&apos;re on right now (or its .dev twin). I built it to showcase
+                            This website — the one you&apos;re on right now. I built it to showcase
                             everything above: a dark, animated Next.js portfolio, served straight from my home
                             Kubernetes cluster.
                         </WebProject>

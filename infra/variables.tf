@@ -21,10 +21,23 @@ variable "public_hosts" {
   description = "Public hostnames Traefik should route to this app (TLS via Let's Encrypt)."
   type        = list(string)
   default = [
-    "www.parcerisa.xyz",
-    "parcerisa.xyz",
     "www.parcerisa.dev",
     "parcerisa.dev",
+  ]
+}
+
+variable "canonical_url" {
+  description = "Canonical origin of the site; legacy hosts redirect here."
+  type        = string
+  default     = "https://www.parcerisa.dev"
+}
+
+variable "legacy_hosts" {
+  description = "Old hostnames kept only to 301-redirect to canonical_url (path preserved)."
+  type        = list(string)
+  default = [
+    "www.parcerisa.xyz",
+    "parcerisa.xyz",
   ]
 }
 

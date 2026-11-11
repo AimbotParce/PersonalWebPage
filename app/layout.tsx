@@ -16,7 +16,8 @@ const body = Inter({
 })
 
 export const metadata: Metadata = {
-    metadataBase: new URL("https://www.parcerisa.xyz"),
+    metadataBase: new URL("https://www.parcerisa.dev"),
+    alternates: { canonical: "/" },
     title: "Marc Parcerisa — AI Engineer & Physicist",
     description:
         "Physicist turned AI engineer and software developer. Projects across AI, computer vision, simulation and the web.",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
         title: "Marc Parcerisa — AI Engineer & Physicist",
         description:
             "Physicist turned AI engineer and software developer. Projects across AI, computer vision, simulation and the web.",
-        url: "https://www.parcerisa.xyz",
+        url: "https://www.parcerisa.dev",
         siteName: "Marc Parcerisa",
         type: "website",
     },

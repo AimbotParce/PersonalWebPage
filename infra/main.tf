@@ -1,5 +1,5 @@
 ###############################################################################
-# www.parcerisa.xyz -- personal website
+# www.parcerisa.dev -- personal website
 #
 # Stateless Next.js app (listens on :3000). No PVC: nothing to persist. Served
 # publicly through HomeInfra's Traefik "public" ingress, which terminates TLS
@@ -141,6 +141,75 @@ resource "kubernetes_ingress_v1" "web" {
     # Traefik's ACME resolver.
     tls {
       hosts = var.public_hosts
+    }
+  }
+}
+
+###############################################################################
+# Legacy hosts (parcerisa.xyz) -> permanent redirect to the canonical .dev site
+#
+# Public-facing sites live on parcerisa.dev. The .xyz names only redirect so
+# old links keep working. Traefik terminates TLS for them (Let's Encrypt via
+# tls.hosts) and the middleware answers with a 301 before reaching the backend.
+###############################################################################
+
+resource "kubernetes_manifest" "legacy_redirect" {
+  manifest = {
+    apiVersion = "traefik.io/v1alpha1"
+    kind       = "Middleware"
+    metadata = {
+      name      = "legacy-redirect"
+      namespace = var.namespace
+    }
+    spec = {
+      redirectRegex = {
+        regex       = "^https?://[^/]+(/.*)?$"
+        replacement = "${var.canonical_url}$${1}"
+        permanent   = true
+      }
+    }
+  }
+}
+
+resource "kubernetes_ingress_v1" "legacy" {
+  metadata {
+    name      = "parcerisa-web-legacy"
+    namespace = var.namespace
+    annotations = {
+      "traefik.ingress.kubernetes.io/router.middlewares" = "${var.namespace}-${kubernetes_manifest.legacy_redirect.manifest.metadata.name}@kubernetescrd"
+    }
+  }
+
+  spec {
+    ingress_class_name = "public"
+
+    dynamic "rule" {
+      for_each = toset(var.legacy_hosts)
+
+      content {
+        host = rule.value
+
+        http {
+          path {
+            path      = "/"
+            path_type = "Prefix"
+
+            # Never reached: the middleware redirects every request first.
+            backend {
+              service {
+                name = kubernetes_service_v1.web.metadata[0].name
+                port {
+                  number = 80
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    tls {
+      hosts = var.legacy_hosts
     }
   }
 }
