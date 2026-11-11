@@ -27,7 +27,7 @@ export default function ExperienceCard({
                         >
                             {companyText}
                             <svg
-                                className="translate-y-0.5 text-muted transition-transform duration-300 group-hover:-translate-y-0 group-hover:translate-x-0.5 group-hover:text-accent"
+                                className="translate-y-0.5 text-muted transition-transform duration-300 group-hover:translate-y-0 group-hover:translate-x-0.5 group-hover:text-accent"
                                 width="16"
                                 height="16"
                                 viewBox="0 0 24 24"

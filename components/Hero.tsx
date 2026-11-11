@@ -35,7 +35,7 @@ export default function Hero() {
         <section
             ref={ref}
             id="top"
-            className="relative flex min-h-[100svh] w-full items-center justify-center overflow-hidden px-6 pb-28 pt-24"
+            className="relative flex min-h-svh w-full items-center justify-center overflow-hidden px-6 pb-28 pt-24"
         >
             <motion.div
                 style={{ y, opacity }}
@@ -95,7 +95,7 @@ export default function Hero() {
                     >
                         <a
                             href="#projects"
-                            className="rounded-full bg-gradient-to-r from-[#4fd1ff] to-[#b990ff] px-6 py-3 text-sm font-semibold text-[#0a0a0f] shadow-lg shadow-[#6b8bff]/20 transition hover:-translate-y-0.5 hover:shadow-[#6b8bff]/40"
+                            className="rounded-full bg-linear-to-r from-[#4fd1ff] to-[#b990ff] px-6 py-3 text-sm font-semibold text-[#0a0a0f] shadow-lg shadow-[#6b8bff]/20 transition hover:-translate-y-0.5 hover:shadow-[#6b8bff]/40"
                         >
                             View my work
                         </a>
@@ -114,7 +114,7 @@ export default function Hero() {
                     transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                     className="relative shrink-0"
                 >
-                    <div className="absolute -inset-6 rounded-full bg-gradient-to-tr from-[#4fd1ff]/30 to-[#b990ff]/30 blur-2xl" />
+                    <div className="absolute -inset-6 rounded-full bg-linear-to-tr from-[#4fd1ff]/30 to-[#b990ff]/30 blur-2xl" />
                     <div className="relative h-56 w-56 overflow-hidden rounded-full border border-white/10 bg-surface/40 shadow-2xl sm:h-72 sm:w-72 xl:h-80 xl:w-80">
                         <Image
                             src="/profile.png"
