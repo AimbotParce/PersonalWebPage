@@ -5,13 +5,13 @@ import SiteBackground from "@/components/SiteBackground"
 
 const display = Space_Grotesk({
     subsets: ["latin"],
-    variable: "--font-display",
+    variable: "--font-space-grotesk",
     display: "swap",
 })
 
 const body = Inter({
     subsets: ["latin"],
-    variable: "--font-body",
+    variable: "--font-inter",
     display: "swap",
 })
 

@@ -14,7 +14,7 @@ export default function WebProject({
         <Project title={title} href={href}>
             <a href={href} target="_blank" rel="noopener noreferrer" className="mb-3 block w-fit">
                 <Image
-                    className="h-5 w-auto rounded"
+                    className="h-5 w-auto rounded-sm"
                     src={`https://img.shields.io/website?label=${encodeURIComponent(
                         href.replace("https://", "")
                     )}&url=${encodeURIComponent(
