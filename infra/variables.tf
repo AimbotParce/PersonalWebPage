@@ -26,14 +26,8 @@ variable "public_hosts" {
   ]
 }
 
-variable "canonical_url" {
-  description = "Canonical origin of the site; legacy hosts redirect here."
-  type        = string
-  default     = "https://www.parcerisa.dev"
-}
-
 variable "legacy_hosts" {
-  description = "Old hostnames kept only to 301-redirect to canonical_url (path preserved)."
+  description = "Old hostnames still routed to the app only so it can permanently redirect them to https://www.parcerisa.dev (see next.config.ts)."
   type        = list(string)
   default = [
     "www.parcerisa.xyz",
